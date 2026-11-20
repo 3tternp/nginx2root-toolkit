@@ -160,17 +160,17 @@ pwsh .\nginx2root_check_windows.ps1 -Probe www.example.com:443        # probe ne
 |---|---|
 | 🟢 `FIXED` | Version is at or above the fixed release, or the package changelog names the CVE |
 | 🔵 `N/A` | The vulnerable feature did not exist in this version |
-| 🔴 `EXPOSED` | **Vulnerable build and the affected feature is in the active config** — highest priority |
+| 🔴 `EXPOSED` | **Vulnerable build and the affected feature is in the active config** highest priority |
 | 🟡 `VULN-BUILD` | Vulnerable build; feature not seen in config (may be enabled later or in an unread include) |
-| 🟡 `POSSIBLE` | Vulnerable build; config could not be read — run as root or use `--config-dump` |
-| 🟡 `REVIEW` | Could not decide (for example NGINX Plus) — confirm manually |
+| 🟡 `POSSIBLE` | Vulnerable build; config could not be read run as root or use `--config-dump` |
+| 🟡 `REVIEW` | Could not decide (for example NGINX Plus) confirm manually |
 
 | Verdict | Action |
 |---|---|
 | ✅ `PATCHED` | Fixed build is installed and running |
-| 🔁 `RESTART-REQUIRED` | Fixed binary on disk, **old process still running** — restart NGINX |
+| 🔁 `RESTART-REQUIRED` | Fixed binary on disk, **old process still running** restart NGINX |
 | ❌ `VULNERABLE` | Upgrade, then restart |
-| 🔍 `REVIEW` | NGINX Plus or unparsed version — check against the F5 advisory |
+| 🔍 `REVIEW` | NGINX Plus or unparsed version check against the F5 advisory |
 
 **Exit codes:** `0` no exposure found · `1` vulnerable or restart required · `2` review needed · `3` nginx not found.
 

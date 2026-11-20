@@ -186,8 +186,8 @@ pwsh .\nginx2root_check_windows.ps1 -Probe www.example.com:443        # probe ne
 | 🟩 NGINX Open Source stable and older | 1.9.5 – 1.30.6 | **1.30.7** |
 | 🟦 NGINX Plus 37.1 and later | 37.1.0 – 37.2.0.1 | **37.3.0.1** |
 | 🟦 NGINX Plus 37.0 | 37.0.0 – 37.0.7.1 | **37.0.8.1** |
-| 🟥 NGINX Plus R33 – R36 | All | No fix — move to a fixed 37.x |
-| 🟧 Community ingress-nginx | Archived March 2026 | No fixes — plan migration |
+| 🟥 NGINX Plus R33 – R36 | All | No fix move to a fixed 37.x |
+| 🟧 Community ingress-nginx | Archived March 2026 | No fixes plan migration |
 
 > 📦 Ubuntu and Debian listed their packages as vulnerable at publication. Confirm the **full package version** and the vendor advisory, not `nginx -v` alone.
 

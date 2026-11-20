@@ -255,7 +255,7 @@ sha256sum -c SHA256SUMS.txt
 |---|---|
 | 🐍 Python | Run against simulated NGINX 1.28.0 / 1.30.7 / 1.31.8 / 1.31.9 builds, a local TLS server (HTTP/2 + `Alt-Svc`), and a stale-master process |
 | 🐧 Bash | Same scenarios as Python; output and exit codes matched |
-| 🪟 PowerShell | **Syntax-reviewed only** — not executed. Test on one Windows host before wide use |
+| 🪟 PowerShell | **Syntax-reviewed only** not executed. Test on one Windows host before wide use |
 | 🧱 All | Package-changelog backport check and `--docker` path were **not** exercised against real packages or containers |
 
 ---

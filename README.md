@@ -1,7 +1,6 @@
 # 🛡️ NGINX2Root Toolkit CVE-2026-123007 (+ 4 related)
 
 > **Vairav Technology Security Pvt. Ltd. · Cyber Security Operations Centre (CSOC)**
-> Advisory **VTS-SA-2026-1119-NGINX2ROOT** · 🏷️ **TLP:CLEAR** · 20 November 2026
 
 Read-only scripts that tell you whether an NGINX host is exposed to **NGINX2Root** the HTTP/2 flow-control flaw **CVE-2026-123007** and four related memory-safety flaws fixed by F5 on 18 November 2026.
 

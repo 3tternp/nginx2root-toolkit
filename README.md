@@ -236,7 +236,7 @@ Use only until you can patch; each control covers specific CVEs. Test first and 
 | `No nginx binary found` | Pass `--nginx-bin /path/to/nginx` (custom builds, `/opt`, containers) |
 | Version shows old on Ubuntu/Debian | Backported fix — check the package changelog for CVE-2026-123007 (the script does this automatically) |
 | Probe says `h2 OFFERED` but host is patched | The probe only shows HTTP/2 is *enabled*; use the version check for patch state |
-| Probe result differs from the origin | A CDN or load balancer terminates HTTP/2 — probe the NGINX origin directly |
+| Probe result differs from the origin | A CDN or load balancer terminates HTTP/2 probe the NGINX origin directly |
 | `Execution policy` error on Windows | Run with `-ExecutionPolicy Bypass` as shown above |
 
 ---

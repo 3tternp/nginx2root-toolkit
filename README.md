@@ -1,9 +1,9 @@
-# 🛡️ NGINX2Root Toolkit — CVE-2026-123007 (+ 4 related)
+# 🛡️ NGINX2Root Toolkit CVE-2026-123007 (+ 4 related)
 
 > **Vairav Technology Security Pvt. Ltd. · Cyber Security Operations Centre (CSOC)**
 > Advisory **VTS-SA-2026-1119-NGINX2ROOT** · 🏷️ **TLP:CLEAR** · 20 November 2026
 
-Read-only scripts that tell you whether an NGINX host is exposed to **NGINX2Root** — the HTTP/2 flow-control flaw **CVE-2026-123007** and four related memory-safety flaws fixed by F5 on 18 November 2026.
+Read-only scripts that tell you whether an NGINX host is exposed to **NGINX2Root** the HTTP/2 flow-control flaw **CVE-2026-123007** and four related memory-safety flaws fixed by F5 on 18 November 2026.
 
 ---
 
@@ -12,9 +12,9 @@ Read-only scripts that tell you whether an NGINX host is exposed to **NGINX2Root
 - [🔬 What the scripts decide](#-what-the-scripts-decide)
 - [🗂️ Package contents](#️-package-contents)
 - [🪪 Requirements](#-requirements)
-- [🐍 Script 1 — Python (any OS)](#-script-1--nginx2root_checkpy)
-- [🐧 Script 2 — Bash (Linux)](#-script-2--nginx2root_check_linuxsh)
-- [🪟 Script 3 — PowerShell (Windows)](#-script-3--nginx2root_check_windowsps1)
+- [🐍 Script 1 Python (any OS)](#-script-1--nginx2root_checkpy)
+- [🐧 Script 2 Bash (Linux)](#-script-2--nginx2root_check_linuxsh)
+- [🪟 Script 3 PowerShell (Windows)](#-script-3--nginx2root_check_windowsps1)
 - [🧮 Reading the results](#-reading-the-results)
 - [📦 Fixed versions](#-fixed-versions)
 - [🐳 Containers and Kubernetes](#-containers-and-kubernetes)
@@ -89,7 +89,7 @@ chmod +x *.sh *.py
 
 ---
 
-## 🐍 Script 1 — `nginx2root_check.py`
+## 🐍 Script 1 `nginx2root_check.py`
 
 Cross-platform check with optional JSON output for tooling.
 
@@ -111,7 +111,7 @@ sudo python3 nginx2root_check.py --json > nginx2root_$(hostname).json
 
 ---
 
-## 🐧 Script 2 — `nginx2root_check_linux.sh`
+## 🐧 Script 2 `nginx2root_check_linux.sh`
 
 Same checks in plain bash, no Python needed.
 
@@ -137,7 +137,7 @@ Options match the Python script: `--nginx-bin`, `--config-dump`, `--probe`, `--d
 
 ---
 
-## 🪟 Script 3 — `nginx2root_check_windows.ps1`
+## 🪟 Script 3 `nginx2root_check_windows.ps1`
 
 For `nginx.exe` on Windows Server (also runs under PowerShell 7 on Linux for the local checks).
 
@@ -210,7 +210,7 @@ kubectl exec -n <ns> <pod> -- nginx -v                          # one pod
 ## 🩹 Patch and restart
 
 1. ⬆️ Upgrade to **1.31.9 / 1.30.7** (OSS) or **37.3.0.1 / 37.0.8.1** (Plus), or to a distro package that names CVE-2026-123007.
-2. 🔁 **Restart** — `sudo nginx -t && sudo systemctl restart nginx` — or do a live binary upgrade. **A reload is not enough.**
+2. 🔁 **Restart** `sudo nginx -t && sudo systemctl restart nginx` — or do a live binary upgrade. **A reload is not enough.**
 3. 🔎 Re-run the script and confirm `VERDICT: PATCHED` with `running current binary`.
 
 ---

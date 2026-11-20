@@ -32,7 +32,7 @@ Each NGINX instance gets a **verdict**, built from six checks:
 | # | Check | Why it matters |
 |---|---|---|
 | 1️⃣ | 🏷️ **Version** | Fixed builds are OSS **1.31.9 / 1.30.7** and Plus **37.3.0.1 / 37.0.8.1**. October releases do **not** fix these flaws |
-| 2️⃣ | 📦 **Distro backport** | Ubuntu/Debian/RHEL may fix without changing the version — the script looks for the CVE ID in the package changelog |
+| 2️⃣ | 📦 **Distro backport** | Ubuntu/Debian/RHEL may fix without changing the version the script looks for the CVE ID in the package changelog |
 | 3️⃣ | 🔁 **Restart state** | A **reload keeps the vulnerable binary in memory**. The script flags a master process older than the binary on disk |
 | 4️⃣ | ⚙️ **Features in config** | Each CVE needs a feature: HTTP/2, HTTP/3 (QUIC), variable `proxy_pass` + resolver + SSI/mirror, or mail proxy `auth_http` |
 | 5️⃣ | 🧬 **Kernel SCTP** | The public root chain uses a separate Linux SCTP flaw; reports whether the module is loaded or blocked |
